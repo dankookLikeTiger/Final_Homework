@@ -1,0 +1,97 @@
+<nav class="navbar navbar-default top-bar affix" data-spy="affix" >
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">INDIEWA</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          
+          <ul class="nav navbar-nav navbar-right">
+            <% if can? :create, @game %>
+            <li><a href="/home/games_create">관리자 등록</a></li>
+            <% end %>
+              <li><a href="/home/Genre">장르</a></li>
+              <li><a href="/home/GOD">매력</a></li>
+              <li><a href="/home/cmt">리뷰</a></li>
+      <% if user_signed_in? %>
+          <ul class="nav navbar-nav navbar-right">
+          <li><a href="/users/sign_out">로그아웃</a></li>
+          </ul>
+      <% else %>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/users/sign_in">로그인</a></li>
+        </ul>
+      <% end %>
+           
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+<br><br><br><br><br>
+<section id="video-sec" class="parallax">
+  <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+          <div class="col-md-offset-2 col-md-8 col-sm-12">
+              <h2 class="wow fadeInUp" data-wow-delay="0.5s">Game Trailer<small>트레일러를 보고 게임에 대해 알아보세요.</small></h2>
+              <a class="popup-youtube" href="https://www.youtube.com/watch?v=tF1clBl-ufY" ><i class="fa fa-play"></i></a>
+          </div>
+      </div>
+    </div>
+</section>
+
+<body>
+
+    
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Portfolio Item Heading -->
+        <h2 class="my-4">21데이즈<small>21 Days</small></h2>
+
+        <!-- Portfolio Item Row -->
+        <div class="row">
+
+            <div class="col-md-8">
+                <img class="sally_img img-fluid" src="https://i.ytimg.com/vi/qSMjZauF_6o/maxresdefault.jpg" alt="">
+            </div>
+
+            <div class="col-md-4">
+                <h3 class="my-3">게임설명</h3>
+                <p> 시리아 난민 수용에 대한 문제와 시리아 난민에 대한 인도적인 처우, 그리고  그들에 대한 곱지만은 않은 시선들은 아직까지도 거론되고 있을 만큼 세계적으로도 상당히 문제가 되고 있는 중요한 이슈다.<br>
+                     놀랍게도, 다른 나라도 아닌 한국에서 이런 시리아 난민들의 입장을 간접적으로나마 체험해볼 수 있는 게임이 개발됐다. 시리아 내전으로 인해 고향을 떠나 낯선 유럽의 한 도시에서의 삶을 체험해보는 게임 "21 days"이다.
+                    <h3 class="my-3">특징</h3>
+                <ul>
+                    <li>수상 : BIC FEST 2016 Excellence in Narrative Finalist</li>
+                </ul>
+            </div>
+
+        </div>
+    
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">by &copy; INDIEWA</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
+
+

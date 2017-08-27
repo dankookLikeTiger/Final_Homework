@@ -1,0 +1,98 @@
+<nav class="navbar navbar-default top-bar affix" data-spy="affix" >
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">INDIEWA</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          
+          <ul class="nav navbar-nav navbar-right">
+            <% if can? :create, @game %>
+            <li><a href="/home/games_create">관리자 등록</a></li>
+            <% end %>
+              <li><a href="/home/Genre">장르</a></li>
+              <li><a href="/home/GOD">매력</a></li>
+              <li><a href="/home/cmt">리뷰</a></li>
+      <% if user_signed_in? %>
+          <ul class="nav navbar-nav navbar-right">
+          <li><a href="/users/sign_out">로그아웃</a></li>
+          </ul>
+      <% else %>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/users/sign_in">로그인</a></li>
+        </ul>
+      <% end %>
+           
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+<br><br><br><br><br>
+<section id="video-sec" class="parallax">
+  <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+          <div class="col-md-offset-2 col-md-8 col-sm-12">
+              <h2 class="wow fadeInUp" data-wow-delay="0.5s">Game Trailer<small>트레일러를 보고 게임에 대해 알아보세요.</small></h2>
+              <a class="popup-youtube" href="https://www.youtube.com/watch?v=bjQ2jrBHZsw" ><i class="fa fa-play"></i></a>
+          </div>
+      </div>
+    </div>
+</section>
+
+<body>
+
+    
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Portfolio Item Heading -->
+        <h2 class="my-4">샐리의 법칙<small>Sally's Law</small></h2>
+
+        <!-- Portfolio Item Row -->
+        <div class="row">
+
+            <div class="col-md-8">
+                <img class="sally_img img-fluid" src="http://www.nanali.net/uploads/cb1502009/201608/013ed910d74d6618f39eb2b4e8e11cfe_crop.jpg?t=156bb756e30" alt="">
+            </div>
+
+            <div class="col-md-4">
+                <h3 class="my-3">게임설명</h3>
+                <p>2016년 구글 인디게임 페스티벌 수상작을 만나보세요!<br>
+                    위독한 아버지를 찾아 고향으로 향하는 샐리. 무엇도 앞길을 방해않는, 샐리의 운수 좋은 여정이 펼쳐집니다. 이해 못할 정도의 행운들로 가득한 상황들. 그녀의 대단한 행운은 단지 우연의 일치일까요? 열심히 굴러굴러! 고향을 향하는동안 밝혀지는 샐리와 아버지의 과거들, 그리고 둘의 마지막 이야기.
+                    <h3 class="my-3">특징</h3>
+                <ul>
+                    <li>2016 구글 인디게임 페스티벌 : 최우수개발사</li>
+                    <li>2016 부산 인디커넥트 페스티벌 : Excellence In Narrative Finalist</li>
+                </ul>
+            </div>
+
+        </div>
+    
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">by &copy; INDIEWA</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
+
+

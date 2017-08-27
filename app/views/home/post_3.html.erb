@@ -1,0 +1,103 @@
+<nav class="navbar navbar-default top-bar affix" data-spy="affix" >
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">INDIEWA</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          
+          <ul class="nav navbar-nav navbar-right">
+            <% if can? :create, @game %>
+            <li><a href="/home/games_create">관리자 등록</a></li>
+            <% end %>
+              <li><a href="/home/Genre">장르</a></li>
+              <li><a href="/home/GOD">매력</a></li>
+              <li><a href="/home/cmt">리뷰</a></li>
+      <% if user_signed_in? %>
+          <ul class="nav navbar-nav navbar-right">
+          <li><a href="/users/sign_out">로그아웃</a></li>
+          </ul>
+      <% else %>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/users/sign_in">로그인</a></li>
+        </ul>
+      <% end %>
+           
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+<section id="video-sec" class="parallax">
+  <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+          <div class="col-md-offset-2 col-md-8 col-sm-12">
+              <h2 class="wow fadeInUp" data-wow-delay="0.5s">Game Trailer<small>트레일러를 보고 게임에 대해 알아보세요.</small></h2>
+              <a class="popup-youtube" href="https://www.youtube.com/watch?v=CyCDIu_sePY" ><i class="fa fa-play"></i></a>
+          </div>
+      </div>
+    </div>
+</section>
+<br><br><br><br><br>
+<body>
+
+    
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Portfolio Item Heading -->
+        <h2 class="my-4">레플리카<small>Replica</small></h2>
+
+        <!-- Portfolio Item Row -->
+        <div class="row">
+
+            <div class="col-md-8">
+                <img class="sally_img img-fluid" src="http://www.appunwrapper.com/wp-content/uploads/2016/11/image-128.jpg" alt="">
+            </div>
+
+            <div class="col-md-4">
+                <h3 class="my-3">게임설명</h3>
+                <p>"이 나라에 필요한 건 건물이 아니에요, 희망이죠!" - 이비 해몬드(Evey Hammond)<br>
+                    레플리카는 휴대전화와 소셜 미디어를 소재로 한 인터랙티브 소설 게임입니다.
+
+                    당신은 주인을 알 수 없는 하나의 휴대전화를 갖고 있습니다. 정부기관의 강요에 따라 휴대전화 주인의 계정을 해킹하고, 문자 및 소셜 미디어 활동 기록을 사찰해서 테러 혐의점을 찾아야합니다.
+                    
+                    타인의 휴대전화 속에 들어있는 사생활을 훔쳐보는 변태적인 경험이 당신을 이 나라의 최고 애국자로 만들어줄 것입니다.
+                    <h3 class="my-3">특징</h3>
+                <ul>
+                    <li>인디케이드 임펙트 상</li>
+                    <li>부산 인디커넥트 2016 최고의 서사 상</li>
+                    <li>일본 인디스트림 최고의 게임디자인, 그리고 최고의 내러티브 상</li>
+                </ul>
+            </div>
+
+        </div>
+    
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">by &copy; INDIEWA</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
+
+

@@ -1,0 +1,161 @@
+<nav class="navbar navbar-default top-bar affix" data-spy="affix"  >
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">INDIEWA</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li><a href="/home/Genre">장르</a></li>
+              <li><a href="/home/GOD">매력</a></li>
+              <li><a href="/home/cmt">리뷰</a></li>
+      <% if user_signed_in? %>
+          <ul class="nav navbar-nav navbar-right">
+          <li><a href="/users/sign_out">로그아웃</a></li>
+          </ul>
+      <% else %>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/users/sign_in">로그인</a></li>
+        </ul>
+      <% end %>
+           
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+<!------------ Gallery section ------------>
+<section id="hotels" class="parallax">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-12">
+
+       <div class="col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 text-center">
+         <div class="wow fadeInUp section-title" data-wow-delay="1s">
+            <h2>장르별로 모아보기<small>Genre choice</small></h2>
+        </div>
+      </div>
+        
+          <!-- iso section -->
+          <div class="iso-section wow fadeInUp text-center" data-wow-delay="0.5">
+
+            		<ul class="filter-wrapper clearfix">
+                        <li><a href="#" data-filter="*" class="selected opc-main-bg">All</a></li>
+                        <li><a href="#" class="opc-main-bg" data-filter=".rpg">RPG</a></li>
+                        <li><a href="#" class="opc-main-bg" data-filter=".adventure">어드벤처</a></li>
+                        <li><a href="#" class="opc-main-bg" data-filter=".casual">캐주얼</a></li>
+                        <li><a href="#" class="opc-main-bg" data-filter=".action">액션</a></li>
+                    </ul>
+
+                    <!-- iso box section -->
+                    <div class="iso-box-section wow fadeInUp" data-wow-delay="0.9s">
+                      <div class="iso-box-wrapper col4-iso-box">
+                        
+                        <div class="iso-box casual">
+                          <div class="gallery-thumb">
+                            <a href="/home/post_1" data-lightbox-gallery="food-gallery">
+                              <img src="http://postfiles2.naver.net/20160825_17/kitpage_1472133025172WQoRU_PNG/com_Nanali.png?type=w773" class="size fluid-img" alt="Gallery">
+                                <div class="gallery-overlay">
+                                  <div class="gallery-item">
+                                    <i class="fa fa-search"></i>
+                                  </div>
+                                </div>
+                            </a>
+                          
+                          </div>
+                          <h3>샐리의 법칙(Sally's Law)</h3>
+                        </div>
+
+                        <div class="iso-box adventure">
+                          <div class="gallery-thumb">
+                            <a href="/home/post_2" data-lightbox-gallery="food-gallery">
+                              <img src="http://postfiles16.naver.net/MjAxNzA2MjFfMjk1/MDAxNDk4MDE5OTI5Mjgx.Fn6X-dSrZWn2gbE5pupQyAE7oqGI1RlRIribNBg8qCMg.eivBl-AGdaeRM-hoyHnht8iPoif6c5-IzRGnTJcPv_sg.JPEG.kitpage/header_21days.jpg?type=w773" class="size fluid-img" alt="Gallery">
+                                <div class="gallery-overlay">
+                                  <div class="gallery-item">
+                                    <i class="fa fa-search"></i>
+                                  </div>
+                                </div>
+                            </a>
+                          </div>
+                          <h3>21데이즈(21 Days)</h3>
+                        </div>
+
+                        <div class="iso-box adventure">
+                          <div class="gallery-thumb">
+                            <a href="/home/post_3" data-lightbox-gallery="food-gallery">
+                              <img src="http://postfiles10.naver.net/20160713_41/kitpage_1468378025508NEAkF_JPEG/header_replica.jpg?type=w773" class="size fluid-img" alt="Gallery">
+                                <div class="gallery-overlay">
+                                  <div class="gallery-item">
+                                    <i class="fa fa-search"></i>
+                                  </div>
+                                </div>
+                            </a>
+                          </div>
+                          <h3>레플리카(Replica)</h3>
+                        </div>
+
+                        <div class="iso-box action">
+                          <div class="gallery-thumb">
+                            <a href="/home/post_4" data-lightbox-gallery="food-gallery">
+                              <img src="http://cdn.akamai.steamstatic.com/steam/apps/588650/header.jpg?t=1498756847" class="size fluid-img" alt="Gallery">
+                                <div class="gallery-overlay">
+                                  <div class="gallery-item">
+                                    <i class="fa fa-search"></i>
+                                  </div>
+                                </div>
+                            </a>
+                          </div>
+                          <h3>데드 셀(Dead Cells)</h3>
+                        </div>
+
+                        <div class="iso-box action adventure ">
+                          <div class="gallery-thumb">
+                            <a href="/home/post_5" data-lightbox-gallery="food-gallery">
+                              <img src="http://cdn.akamai.steamstatic.com/steam/apps/115800/header.jpg?t=1495589377" class="size fluid-img" alt="Gallery">
+                                <div class="gallery-overlay">
+                                  <div class="gallery-item">
+                                    <i class="fa fa-search"></i>
+                                  </div>
+                                </div>
+                            </a>
+                          </div>
+                          <h3>오울보이(Owlboy)</h3>
+                        </div>
+
+                        <div class="iso-box casual">
+                          <div class="gallery-thumb">
+                            <a href="/home/post_6" data-lightbox-gallery="food-gallery">
+                              <img src="http://cdn.akamai.steamstatic.com/steam/apps/582550/header.jpg?t=1500032244" class="size fluid-img" alt="Gallery">
+                                <div class="gallery-overlay">
+                                  <div class="gallery-item">
+                                    <i class="fa fa-search"></i>
+                                  </div>
+                                </div>
+                            </a>
+                          </div>
+                          <h3>파스포투트(Passpartout)</h3>
+                        </div>
+
+                       </div>
+                    </div>
+
+          </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+<footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">by &copy; INDIEWA</p>
+        </div>
+        <!-- /.container -->
+    </footer>

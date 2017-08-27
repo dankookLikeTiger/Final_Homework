@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+ <div class="loader loader-bg">
+        <div class="loader-inner ball-pulse-rise">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+<!------------Static navbar ------------>
+    <nav class="navbar navbar-default top-bar affix" data-spy="affix" >
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">INDIEWA</a>
+  
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li><a href="/home/Genre">장르</a></li>
+              <li><a href="/home/GOD">매력</a></li>
+              <li><a href="/home/cmt">리뷰</a></li>
+      <% if user_signed_in? %>
+          <ul class="nav navbar-nav navbar-right">
+          <li><a href="/users/sign_out">로그아웃</a></li>
+          </ul>
+      <% else %>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/users/sign_in">로그인</a></li>
+        </ul>
+      <% end %>
+           
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    
+
+    
+<!------------ Home Banner ------------>
+<section id="banner" class="parallax" >
+  <div class="gradient-overlay">
+    <div class="container">
+      
+         <div id="wrapper">
+      		<div>
+      			<div class="sliderbutton"><img src="left.gif" width="32" height="38" alt="Previous" onclick="slideshow.move(-1)" /></div>
+      			<div id="slider">
+      				<ul>
+      					<li><img src="http://static.wixstatic.com/media/b70cda_fac2e5e3819f4b5299d2decf3114be3d~mv2.png_srz_771_432_85_22_0.50_1.20_0.00_png_srz" width="500" height="300" alt="Sea turtle" /></li>
+      					<li><img src="data:image/png;base64,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" width="500" height="300" alt="Coral Reef" /></li>
+      					<li><img src="http://cdn.akamai.steamstatic.com/steam/apps/219740/header.jpg?t=1487187418" width="500" height="300" alt="Blue Fish" /></li>
+      				</ul>
+      			</div>
+      			<div class="sliderbutton"><img src="right.gif" width="32" height="38" alt="Next" onclick="slideshow.move(1)" /></div>
+      		</div>
+      		<ul id="pagination" class="pagination">
+      			<li onclick="slideshow.pos(0)">1</li>
+      			<li onclick="slideshow.pos(1)">2</li>
+      			<li onclick="slideshow.pos(2)">3</li>
+      		</ul>
+      	</div>
+      	<script type="text/javascript">
+      	var slideshow=new TINY.slider.slide('slideshow',{
+      		id:'slider',
+      		auto:3,
+      		resume:true,
+      		vertical:false,
+      		navid:'pagination',
+      		activeclass:'current',
+      		position:0
+      	});
+      	</script>
+      
+    </div>
+   </div>
+  </div>
+</section>
+
+<!------------ Menu section ------------>
+<section id="location" class="parallax">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10">
+         <div class="wow fadeInUp section-title" data-wow-delay="1s">
+            <h2> Best Game <small> 요즘 뜨는 게임 </small></h2>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-sm-12">
+        <div class="media wow fadeInUp" data-wow-delay="0.5s">
+          <div class="media-object pull-left">
+            <img src="http://cdn.akamai.steamstatic.com/steam/apps/588650/header.jpg?t=1498756847" class="img-responsive" alt="Food Menu">
+          </div>
+          <div class="media-body">
+            <h3 class="media-heading">데드 셀(Dead Cells)</h3>
+            <p>데드 셀은 로그-라이트, 메트로배니아 액션 플랫폼입니다. 죽이고, 죽고, 배우고, 반복하세요.</p>
+              <a href="/home/post_4" class="btn btn-capsul btn-transparent-prime">보러가기</a>
+          </div>
+        </div>
+
+        <div class="media wow fadeInUp" data-wow-delay="0.9s">
+          <div class="media-object pull-left">
+            <img src="http://cdn.akamai.steamstatic.com/steam/apps/582550/header.jpg?t=1500032244" class="img-responsive" alt="Food Menu">
+          </div>
+          <div class="media-body">
+            <h3 class="media-heading">오울보이(Owlboy)</h3>
+            <p>오투스는 말을 못하기에, 아울후드의 기대에 부응하느라 고생하고 있습니다. 하늘 해적이 갑작스럽게 출현하며 상황은 최악으로 치닫습니다.</p>
+             <a href="/home/post_6" class="btn btn-capsul btn-transparent-prime">보러가기</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-md-6 col-sm-12">
+        <div class="media wow fadeInUp" data-wow-delay="0.5s">
+          <div class="media-object pull-left">
+            <img src="http://cdn.akamai.steamstatic.com/steam/apps/582550/header.jpg?t=1500032244" class="img-responsive" alt="Food Menu">
+           </div>
+          <div class="media-body">
+            <h3 class="media-heading">파스포투트(Passpartout)</h3>
+            <p>미술품을 그리고 판매해서 값비싼 와인과 바게트에 중독된 삶을 이어 가세요. 자신만의 걸작을 그리세요!</p>
+              <a href="/home/post_6" class="btn btn-capsul btn-transparent-prime">보러가기</a>
+          </div>
+        </div>
+
+        <div class="media wow fadeInUp" data-wow-delay="0.9s">
+          <div class="media-object pull-left">
+            <img src="http://postfiles10.naver.net/20160713_41/kitpage_1468378025508NEAkF_JPEG/header_replica.jpg?type=w773" class="img-responsive" alt="Food Menu">
+          </div>
+          <div class="media-body">
+            <h3 class="media-heading">레플리카(Replica)</h3>
+            <p> 레플리카는 휴대전화와 소셜 미디어를 소재로 한 인터랙티브 소설 게임입니다.</p>
+              <a href="/home/post_3" class="btn btn-capsul btn-transparent-prime">보러가기</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!------------ Footer section ------------>
+<footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">by &copy; INDIEWA</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+</body>
+</html>

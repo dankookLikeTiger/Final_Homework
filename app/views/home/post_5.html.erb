@@ -1,0 +1,102 @@
+<nav class="navbar navbar-default top-bar affix" data-spy="affix" >
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">INDIEWA</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          
+          <ul class="nav navbar-nav navbar-right">
+            <% if can? :create, @game %>
+            <li><a href="/home/games_create">관리자 등록</a></li>
+            <% end %>
+              <li><a href="/home/Genre">장르</a></li>
+              <li><a href="/home/GOD">매력</a></li>
+              <li><a href="/home/cmt">리뷰</a></li>
+      <% if user_signed_in? %>
+          <ul class="nav navbar-nav navbar-right">
+          <li><a href="/users/sign_out">로그아웃</a></li>
+          </ul>
+      <% else %>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/users/sign_in">로그인</a></li>
+        </ul>
+      <% end %>
+           
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+<section id="video-sec" class="parallax">
+  <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+          <div class="col-md-offset-2 col-md-8 col-sm-12">
+              <h2 class="wow fadeInUp" data-wow-delay="0.5s">Game Trailer<small>트레일러를 보고 게임에 대해 알아보세요.</small></h2>
+              <a class="popup-youtube" href="https://www.youtube.com/watch?v=p9VwGaycmCQ" ><i class="fa fa-play"></i></a>
+          </div>
+      </div>
+    </div>
+</section>
+
+<body>
+
+    
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Portfolio Item Heading -->
+        <h2 class="my-4">오울보이<small>Owlboy</small></h2>
+
+        <!-- Portfolio Item Row -->
+        <div class="row">
+
+            <div class="col-md-8">
+                <img class="sally_img img-fluid" src="https://images6.alphacoders.com/772/772170.jpg" alt="">
+            </div>
+
+            <div class="col-md-4">
+                <h3 class="my-3">게임설명</h3>
+                <p>이 비행 어드벤처 플랫폼 게임에서 활기 넘치는 픽셀 월드를 탐험해 보세요. 
+                    오투스는 말을 못하기에, 아울후드의 기대에 부응하느라 고생하고 있습니다. 하늘 해적이 갑작스럽게 출현하며 상황은 최악으로 치닫습니다. 
+                    
+                    그에 따라, 괴물이 득시글거리는 폐허를 지나면서 뜻밖의 조우를 하고, 누구도 부담해서는 안 되는 짐을 감당해야 합니다.
+                    <h3 class="my-3">특징</h3>
+                <ul>
+                    <li>GDC PLAY best in play 2015</li>
+                    <li>IGF NOMINEE excellence in visual arts 2010</li>
+                    <li>NORWEGIAN GAME AWARDS game of the year 2010</li>
+                    <li>PAX featured PAX 10 2013</li>
+                </ul>
+            </div>
+
+        </div>
+    
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">by &copy; INDIEWA</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
+
+

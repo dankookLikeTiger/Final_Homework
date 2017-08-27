@@ -1,0 +1,96 @@
+<nav class="navbar navbar-default top-bar affix" data-spy="affix" >
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">INDIEWA</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          
+          <ul class="nav navbar-nav navbar-right">
+            <% if can? :create, @game %>
+            <li><a href="/home/games_create">관리자 등록</a></li>
+            <% end %>
+              <li><a href="/home/Genre">장르</a></li>
+              <li><a href="/home/GOD">매력</a></li>
+              <li><a href="/home/cmt">리뷰</a></li>
+      <% if user_signed_in? %>
+          <ul class="nav navbar-nav navbar-right">
+          <li><a href="/users/sign_out">로그아웃</a></li>
+          </ul>
+      <% else %>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/users/sign_in">로그인</a></li>
+        </ul>
+      <% end %>
+           
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+<br><br><br><br><br>
+<section id="video-sec" class="parallax">
+  <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+          <div class="col-md-offset-2 col-md-8 col-sm-12">
+              <h2 class="wow fadeInUp" data-wow-delay="0.5s">Game Trailer<small>트레일러를 보고 게임에 대해 알아보세요.</small></h2>
+              <a class="popup-youtube" href="https://www.youtube.com/watch?v=Hcq376tJRJk" ><i class="fa fa-play"></i></a>
+          </div>
+      </div>
+    </div>
+</section>
+
+<body>
+
+    
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Portfolio Item Heading -->
+        <h2 class="my-4">데드 셀<small>Dead Cells</small></h2>
+
+        <!-- Portfolio Item Row -->
+        <div class="row">
+
+            <div class="col-md-8">
+                <img class="sally_img img-fluid" src="http://cdn.edgecast.steamstatic.com/steam/apps/588650/ss_08d6fecdb5d8ebd16807d12c30da7afc973cc05e.jpg?t=1492617956" alt="">
+            </div>
+
+            <div class="col-md-4">
+                <h3 class="my-3">게임설명</h3>
+                <p>데드 셀은 로그-라이트, 메트로배니아 액션 플랫폼입니다. 2D 영혼과의 전투에서 파수꾼과 싸우며 거대한 규모의 성을 탐험 할 것입니다. 체크 포인트는 없습니다. 죽이고, 죽고, 배우고, 반복하세요.
+                    <h3 class="my-3">특징</h3>
+                <ul>
+                    <li>현재 얼리억세스 게임(early access)</li>
+                </ul>
+            </div>
+
+        </div>
+    
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">by &copy; INDIEWA</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
+
+

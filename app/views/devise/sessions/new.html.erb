@@ -1,0 +1,53 @@
+
+<style>
+.member{
+   margin-top :80px;
+   text-shadow: 0 0 10px #E0EBFF;
+   text-align: center;
+}
+  
+.field{
+  text-align: center;
+  margin-top: 25px;
+}
+
+.actions{
+  text-align: center;
+  margin-top: 10px;
+}
+
+.a{
+   text-align: center;
+   margin-top: 5px;
+}
+
+</style>
+
+
+  <h2 class="member">Log in</h2>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+
+  <% if devise_mapping.rememberable? -%>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end -%>
+
+  <div class="actions">
+    <%= f.submit "Log in" %>
+</div>
+<% end %>
+<div class="a">
+<%= render "devise/shared/links" %>
+</div>

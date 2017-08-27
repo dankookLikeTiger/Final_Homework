@@ -1,0 +1,10 @@
+<h3>수정하는곳</h3>
+
+<form action="/home/update/<%=@game.id%>">
+    <p>제목</p>
+    <input type="text" name="game_title" value="<%=@game.title%>">
+    <p>내용</p>
+    <input type="text" name="game_content" value="<%=@game.content%>">
+    <p>제출</p>
+    <input type="submit">
+</form>
